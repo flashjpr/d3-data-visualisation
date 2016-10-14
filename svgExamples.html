@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SVG Examples</title>
+</head>
+<body>
+	<!-- create a svg by embeding SVG directly to the DOM -->
+	<svg id="simpleCircle" width="500" height="500">
+		<circle cx="25" cy="25" r="20" style="fill:red;"></circle>
+	</svg>
+
+    <svg id="circleFromJs" width="500" height="500"></svg>
+
+	<!-- create a svg using JavaScript -->
+	<script type="text/javascript">
+
+        function VectorGraphic(parent, tag, attrs) {
+            var el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+
+            for (var k in attrs) {
+                el.setAttribute(k, attrs[k]);
+            }
+
+            var obj;
+            obj = {
+                on: function (event, handler) {
+                    el.addEventListener(event, function () {
+                        handler.call(obj, event);
+                    })
+                },
+                stroke: function (color) {
+                    el.setAttribute("stroke", color);
+                },
+                fill: function (color) {
+                    el.setAttribute("fill", color);
+                },
+                draw: function () {
+                    parent.appendChild(el);
+                }
+            };
+
+            return obj;
+        }
+
+		var ctx = document.getElementById('circleFromJs');
+		var circle = VectorGraphic(ctx, 'circle', {cx: 25, cy:25, r:20});
+
+        circle.fill('green');
+        circle.on('mouseover', function () {
+            this.stroke('black');
+        });
+        circle.draw();
+	</script>
+</body>
+</html>
