@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Example</title>
+</head>
+<body>
+
+    <canvas id="simplePixelGraphics" width="640" height="480"></canvas>
+
+    <script type="text/javascript">
+
+        function PixelGraphic(parent, tag, attrs) {
+
+            var element = parent.getContext('2d');
+            element.beginPath();
+            element.strokeStyle = "#fff";
+            element.fillStyle = "#fff";
+
+            var obj = {
+
+                stroke : function (color) {
+                    element.strokeStyle = color;
+                },
+
+                fill: function (color) {
+                    element.fillStyle = color;
+                },
+
+                draw: function () {
+                    element.arc(attrs.cx, attrs.cy, attrs.r, 0, 2 * Math.PI);
+                    element.stroke();
+                    element.fill();
+                }
+            };
+
+            return obj;
+        }
+
+        var ctx = document.getElementById('simplePixelGraphics');
+        var circle = PixelGraphic(ctx, 'circle', {cx:25, cy:25, r:20});
+        circle.fill('red');
+        circle.draw();
+    </script>
+</body>
+</html>

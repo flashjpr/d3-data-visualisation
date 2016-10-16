@@ -2,8 +2,8 @@
 
  The goal of this repository is to provide a quick info-point to those developers that want to represent ***real time*** data using the JavaScript library D3 .
  
- #### Firstly, the boring part a.k.a. some basic knowledge:
-> (for some) but maybe interesting (for others): **vector  graphics** on the web.
+ ### Let's begin with the boring part a.k.a. some basic knowledge:
+> 1.0 **Vector  graphics** on the web.
 
  **A vector graphic** is constructed by *geometric primitives* and *attributes*. By geometric primitives I mean shapes, and by attributes I mean margins, size, etc. We can deduct that the ***vector*** is created from primitives because it is either created solely from primitives, or created out of complex shapes which are themselves created by **primitives**. If  we *know* that primitives can be characterized by mathematical expressions, we also know that vectors can be described using mathematical expressions.
 
@@ -14,3 +14,12 @@ I have created an html file called *svgExamples.html* to illustrate two ways of 
      - all components of a vector graphic are commonly stored in a **scene graph**, which is installed in the DOM tree
  - by using JavaScript
     - create custom functions which can set up SVGs
+
+
+> 1.1  ***Pixel Graphics***
+
+Here we do not care about how many elements do exist in a graph (image), but what is the actual image resolution.
+In pixel graphics we talk pixels, not elements.
+The bigger the number of pixels in an image, the higher the computation for it.
+
+You can check the file *canvasExamples.html* which ilustrates how to create an image using Pixel Graphics and **JavaScript**.
