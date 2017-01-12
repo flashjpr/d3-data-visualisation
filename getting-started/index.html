@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <script src="../bower_components/d3/d3.js" charset="utf-8"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <h1>Some fruits:</h1>
+
+    <p class="item" id="first-item">Orange</p>
+    <p class="item" id="second-item">Lemon</p>
+    <p class="item" id="third-item">Banana</p>
+
+    <script type="text/javascript">
+        // select all the p tags
+        var ps = d3.selectAll('p');
+        // select all elements with the class 'item'
+        var items = d3.selectAll('.item');
+        // select the 1st elem with the id 'first-item'
+        var firstItem = d3.select('#first-item');
+
+        // add a HTML attribute to all p tags
+        ps.attr('align', 'center');
+        // change the bg-color of the items
+        items.style('background-color','red');
+        // remove the element #first-item from the DOM
+        firstItem.remove();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "d3-data-visualisation",
+  "version": "1.0.0",
+  "description": "The goal of this repository is to provide a quick info-point to those developers that want to represent ***real time*** data using the JavaScript library D3 .",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://flashjpr@github.com/flashjpr/d3-data-visualisation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flashjpr/d3-data-visualisation/issues"
+  },
+  "homepage": "https://github.com/flashjpr/d3-data-visualisation#readme"
+}
