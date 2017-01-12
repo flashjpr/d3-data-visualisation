@@ -19,17 +19,13 @@
         </g>
     </svg>
 
+    <p>Apple, Banana and Orange</p>
 
     <script type="text/javascript">
-
-        // select all groups
-        var groups = d3.selectAll('g');
-
-
-        // get a nested Selection of the circle
-        var circ = groups.selectAll('circle');
-
-        console.log(circ);
+        d3.select('p').attr('class','my-class');
+        console.log(d3.select('p').attr('class'));
     </script>
+
+
 </body>
 </html>
