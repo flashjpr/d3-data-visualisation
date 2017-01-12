@@ -8,27 +8,27 @@
 </head>
 <body>
 
-    <h1>Some fruits:</h1>
-
-    <p class="item" id="first-item">Orange</p>
-    <p class="item" id="second-item">Lemon</p>
-    <p class="item" id="third-item">Banana</p>
+    <svg width="400" height="120">
+        <text x="10" y="40">Some shapes</text>
+        <rect class="item" id="first-item" width="100" height="50" x="0" y="50"></rect>
+        <circle class="item" id="second-item" cx="150" cy="25" r="25"></circle>
+        <line class="item" id="third-item" x2="400" y2="100" style="stroke:black"></line>
+    </svg>
 
     <script type="text/javascript">
-        // select all the p tags
-        var ps = d3.selectAll('p');
+        // select all circles
+        var circ = d3.selectAll('circle');
         // select all elements with the class 'item'
         var items = d3.selectAll('.item');
         // select the 1st elem with the id 'first-item'
         var firstItem = d3.select('#first-item');
 
-        // add a HTML attribute to all p tags
-        ps.attr('align', 'center');
-        // change the bg-color of the items
-        items.style('background-color','red');
-        // remove the element #first-item from the DOM
+        // add a svg attribute to all circle tags
+        circ.attr('r','50');
+        // change the fill color of the items
+        items.style('fill','red')
+        // remove the 1st elem
         firstItem.remove();
-
     </script>
 </body>
 </html>
